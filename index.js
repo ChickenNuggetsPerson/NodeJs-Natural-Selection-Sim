@@ -284,11 +284,11 @@ class Ecosystem {
 
         console.log("---------------------");
         console.log("          Pred    Prey    Bushes");
-        console.log("Current:  ", this.predatorStorage.length, "    ", this.preyStorage.length, "    ", this.bushStorage.length);
+        console.log("Current:  ", this.predatorStorage.length, "    ", this.preyStorage.length, "    ", avaliableBushes.length);
         console.log("Killed:   ", predDeathList.length, "    ", preyKilled, "     ", bushesEaten)
         console.log("---------------------");
 
-        statSystem.pushData(this.stepCount, this.bushStorage.length, this.preyStorage.length, this.predatorStorage.length)
+        statSystem.pushData(this.stepCount, avaliableBushes.length, this.preyStorage.length, this.predatorStorage.length)
         
         return this.stepCount;
     }
