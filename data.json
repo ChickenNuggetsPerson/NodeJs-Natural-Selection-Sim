@@ -1,0 +1,602 @@
+[
+    {
+        "step": 1,
+        "bushTotal": 50,
+        "preyTotal": 27,
+        "predTotal": 5
+    },
+    {
+        "step": 2,
+        "bushTotal": 50,
+        "preyTotal": 33,
+        "predTotal": 6
+    },
+    {
+        "step": 3,
+        "bushTotal": 50,
+        "preyTotal": 35,
+        "predTotal": 8
+    },
+    {
+        "step": 4,
+        "bushTotal": 50,
+        "preyTotal": 34,
+        "predTotal": 9
+    },
+    {
+        "step": 5,
+        "bushTotal": 50,
+        "preyTotal": 35,
+        "predTotal": 11
+    },
+    {
+        "step": 6,
+        "bushTotal": 50,
+        "preyTotal": 38,
+        "predTotal": 13
+    },
+    {
+        "step": 7,
+        "bushTotal": 50,
+        "preyTotal": 37,
+        "predTotal": 17
+    },
+    {
+        "step": 8,
+        "bushTotal": 50,
+        "preyTotal": 33,
+        "predTotal": 20
+    },
+    {
+        "step": 9,
+        "bushTotal": 50,
+        "preyTotal": 28,
+        "predTotal": 25
+    },
+    {
+        "step": 10,
+        "bushTotal": 50,
+        "preyTotal": 27,
+        "predTotal": 28
+    },
+    {
+        "step": 11,
+        "bushTotal": 50,
+        "preyTotal": 19,
+        "predTotal": 34
+    },
+    {
+        "step": 12,
+        "bushTotal": 50,
+        "preyTotal": 4,
+        "predTotal": 41
+    },
+    {
+        "step": 13,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 41
+    },
+    {
+        "step": 14,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 39
+    },
+    {
+        "step": 15,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 35
+    },
+    {
+        "step": 16,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 29
+    },
+    {
+        "step": 17,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 6
+    },
+    {
+        "step": 18,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 19,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 20,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 21,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 22,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 23,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 24,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 25,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 26,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 27,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 28,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 29,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 30,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 31,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 32,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 33,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 34,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 35,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 36,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 37,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 38,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 39,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 40,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 41,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 42,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 43,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 44,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 45,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 46,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 47,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 48,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 49,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 50,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 51,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 52,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 53,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 54,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 55,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 56,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 57,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 58,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 59,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 60,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 61,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 62,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 63,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 64,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 65,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 66,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 67,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 68,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 69,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 70,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 71,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 72,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 73,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 74,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 75,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 76,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 77,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 78,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 79,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 80,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 81,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 82,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 83,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 84,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 85,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 86,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 87,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 88,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 89,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 90,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 91,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 92,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 93,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 94,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 95,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 96,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 97,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 98,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 99,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    },
+    {
+        "step": 100,
+        "bushTotal": 50,
+        "preyTotal": 0,
+        "predTotal": 0
+    }
+]
