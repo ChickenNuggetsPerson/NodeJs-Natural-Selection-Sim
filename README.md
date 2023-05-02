@@ -1,5 +1,10 @@
 # NodeJs Natural Selection Sim
 
+
+Website:
+[Github Pages Link](https://chickennuggetsperson.github.io/NodeJs-Natural-Selection-Sim/)
+
+
 This is a basic nodejs example of simulating natural selection in an enviroment.
 
 The enviroment consists of three objects
