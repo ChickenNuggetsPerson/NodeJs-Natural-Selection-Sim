@@ -56,5 +56,44 @@
       <div id="chart"></div>
     </div>
 
+    <div>
+      <br>Simulation basics
+      <br>
+      <br>Both prey and predators have a trait that can change
+      <br>
+      <br>- Predator
+      <br>Dominant Trait: Better smell - has a higher chance of catching a prey
+      <br>Recessive Trait: Worse smell - has a lower chance of catching a prey
+      <br>
+      <br>- Prey
+      <br>Dominant Trait: Better ears - has a higher chance of evading the predator
+      <br>Recessive Trait: Worse ears - has a lower chance of evading the predator
+      <br>
+      <br>
+      <br>How the math is calculated...
+      <br>Each animal has a genotype of hh, Hh, or HH
+      <br>
+      <br>The chance of being caught is calculated by: 
+      <br>50% + pred_Chance - prey_Chance
+      <br><br><br>
+      <br>Fake Scenario:
+      <br>
+      <br>        Predator = Heterozygous 
+      <br>        Prey = Homozygous Recessive
+      <br>
+      <br>    Settings:
+      <br>
+      <br>        predDomChance = 20
+      <br>        preyRecChance = -5
+      <br>
+      <br>    Math:
+      <br>
+      <br>    50% + 20% - ( -5% ) = 75% of being caught
+      <br>
+      <br>When animals breed with eachother, their offspring's genotype is calculated based on their parent's genotype 
+
+    </div>
+
+
   </body>
 </html>

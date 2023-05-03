@@ -71,16 +71,35 @@ Simulation basics
 Both prey and predators have a trait that can change
 
 - Predator
-Dom: Better smell - has a higher chance of catching a prey
-Rec: Worse smell - has a lower chance of catching a prey
-
-Predators need to eat an animal ever other day to survive
-The more the prey there are, the higher the chance they can eat 
-
+Dominant Trait: Better smell - has a higher chance of catching a prey
+Recessive Trait: Worse smell - has a lower chance of catching a prey
 
 - Prey
-Dom: 
-Rec: 
+Dominant Trait: Better ears - has a higher chance of evading the predator
+Recessive Trait: Worse ears - has a lower chance of evading the predator
+
+
+How the math is calculated...
+Each animal has a genotype of hh, Hh, or HH
+
+The chance of being caught is calculated by: 
+50% + pred_Chance - prey_Chance
+
+Fake Scenario:
+
+        Predator = Heterozygous 
+        Prey = Homozygous Recessive
+
+    Settings:
+
+        predDomChance = 20
+        preyRecChance = -5
+
+    Math:
+
+    50% + 20% - ( -5% ) = 75% of being caught
+
+When animals breed with eachother, their offspring's genotype is calculated based on their parent's genotype 
 
 */
 
