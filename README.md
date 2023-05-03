@@ -25,3 +25,11 @@ If an animal waits too long before eating, then it will die. This causes predato
 <br><br>
 
 I have yet to successfully find a configuration that results in a stable enviroment.  
+
+
+
+## Things that need to be added
+
+1. Random Gene Mutations
+2. Gene Varience ( Have how strong a gene affects the animal passed down )
+3. Add "Introduce Mutation Button" where it mutates the genes of the current living animals
