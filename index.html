@@ -10,7 +10,51 @@
   </head>
   <body>
     <h1>Natural Selection Sim</h1>
-    <div id="chart"></div>
-    <button onclick="updateChart()">Update Chart</button>
+    <h2>By Hayden Steele</h2>
+    <br>
+    <div class="flex-container">
+      <div>
+        <button id="runButton" onclick="main()">Run</button> <input id="continue" type="checkbox"><br><br>
+        preyHungerMax 
+        <br>predHungerMax 
+        <br>
+        <br>preyDomChance 
+        <br>preyRecChance 
+        <br>
+        <br>predDomChance 
+        <br>predRecChance 
+        <br>
+        <br>bushRegrowthTime 
+        <br>
+        <br>PreyStart 
+        <br>PredStart 
+        <br>BushStart 
+        <br>
+        <br>updateSpeed
+        <br>maxSteps  
+      </div>
+      <div>
+          <br><br>
+          <input value="4" id="preyHungerMax"type="number"> </input>
+          <input value="2" id="predHungerMax"type="number"> </input>
+          <br><br>
+          <input value="0" id="preyDomChance"type="number"> </input>
+          <input value="0" id="preyRecChance"type="number"> </input>
+          <br><br>
+          <input value="0" id="predDomChance"type="number"> </input>
+          <input value="0" id="predRecChance"type="number"> </input>
+          <br><br>
+          <input value="3" id="bushRegrowthTime"type="number"> </input>
+          <br><br>
+          <input value="20" id="PreyStart"type="number"> </input>
+          <input value="10" id="PredStart"type="number"> </input>
+          <input value="50" id="BushStart"type="number"> </input>
+          <br><br>
+          <input value="10" id="updateSpeed"type="number"> </input>
+          <input value="50" id="maxSteps"type="number"> </input>
+      </div>
+      <div id="chart"></div>
+    </div>
+
   </body>
 </html>
