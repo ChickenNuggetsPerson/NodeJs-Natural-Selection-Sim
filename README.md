@@ -33,3 +33,4 @@ I have yet to successfully find a configuration that results in a stable envirom
 1. Random Gene Mutations
 2. Gene Varience ( Have how strong a gene affects the animal passed down )
 3. Add "Introduce Mutation Button" where it mutates the genes of the current living animals
+4. Breeding Cooldown 
