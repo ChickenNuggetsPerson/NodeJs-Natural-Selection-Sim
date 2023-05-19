@@ -167,6 +167,9 @@ const PreyStart = document.getElementById("PreyStart").value
 const PredStart = document.getElementById("PredStart").value
 const BushStart = document.getElementById("BushStart").value
 
+const PreyMutationChance = 10;
+const PredMutationChance = 10;
+
 const updateSpeed = document.getElementById("updateSpeed").value;
 const maxSteps = document.getElementById("maxSteps").value;
   
@@ -363,7 +366,7 @@ class Ecosystem {
 
       // Preds breed
       for (let i = 0; i < breedablePreds1.length; i++) {
-          this.predatorStorage.push(createPred(calcDNA(this.predatorStorage[breedablePreds1[i]].genotype, this.predatorStorage[breedablePreds2[i]].genotype)))
+          this.predatorStorage.push(createPred(mutate(calcDNA(this.predatorStorage[breedablePreds1[i]].genotype, this.predatorStorage[breedablePreds2[i]].genotype), PredMutationChance)))
       }
 
 
@@ -402,7 +405,7 @@ class Ecosystem {
       }
       // Prey breed
       for (let i = 0; i < breedablePreys1.length; i++) {
-          this.preyStorage.push(createPrey(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype)))
+          this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
       }
 
       // Remove dead preds
@@ -549,7 +552,21 @@ function randomIntFromInterval(min, max) { // min and max included
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
-
+function mutate(genotype, mutationChance) {
+    let randomChance = randomIntFromInterval(0, 100);
+    if (mutationChance > randomChance) {
+        let newGenotype = randomIntFromInterval(0, 100);
+        if (newGenotype < 33) {
+            return homoDom;
+        }
+        if (newGenotype < 66) {
+            return homoRec;
+        }
+        return hetero;
+    } else {
+        return genotype;
+    }
+}
 
 
 let ecosystem = new Ecosystem();
