@@ -446,7 +446,10 @@ class Ecosystem {
       console.log("Prey Breed")
       // Prey breed
       for (let i = 0; i < breedablePreys1.length; i++) {
-            this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
+
+            const baby = createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance))
+            console.log(baby)
+            this.preyStorage.push(baby)
             this.preyStorage[breedablePreys1[i]].breed();
             this.preyStorage[breedablePreys2[i]].breed();
        }
