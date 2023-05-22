@@ -168,7 +168,7 @@ const PredStart = document.getElementById("PredStart").value
 const BushStart = document.getElementById("BushStart").value
 
 const PreyMutationChance = 10;
-const PredMutationChance = 10;
+const PredMutationChance = 40;
 
 const updateSpeed = document.getElementById("updateSpeed").value;
 const maxSteps = document.getElementById("maxSteps").value;
