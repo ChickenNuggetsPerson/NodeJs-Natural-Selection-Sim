@@ -167,8 +167,14 @@ const PreyStart = document.getElementById("PreyStart").value
 const PredStart = document.getElementById("PredStart").value
 const BushStart = document.getElementById("BushStart").value
 
+const PredBreedCooldown = 1;
+const PreyBreedCooldown = 1;
+
 const PreyMutationChance = 10;
 const PredMutationChance = 40;
+
+const PreyGeneStrengthVarience = 10;
+const PredGeneStrengthVarience = 10;
 
 const updateSpeed = document.getElementById("updateSpeed").value;
 const maxSteps = document.getElementById("maxSteps").value;
@@ -194,6 +200,7 @@ class Prey {
   health = 10.00;
   genotype = randomIntFromInterval(1, 3);
   hunger = preyHungerMax;
+  breedCooldown = PreyBreedCooldown;
   ate = false;
   iterate() {
       this.age++;
@@ -201,7 +208,17 @@ class Prey {
           return false;
       }
       this.hunger = this.hunger - 1;
+      this.breedCooldown = this.breedCooldown - 1;
+      if (this.breedCooldown < 0) {
+        this.breedCooldown = 0;
+      }
       return true;
+  }
+  canBreed() {
+    return this.breedCooldown == 0;
+  }
+  breed() {
+    this.breedCooldown = PreyBreedCooldown;
   }
   eat() {
       this.hunger = preyHungerMax;
@@ -218,6 +235,7 @@ class Predator {
   health = 10.00;
   genotype = randomIntFromInterval(1, 3);
   hunger = predHungerMax;
+  breedCooldown = PredBreedCooldown;
   ate = false;
   iterate() {
       this.age++;
@@ -225,7 +243,17 @@ class Predator {
           return false;
       }
       this.hunger = this.hunger - 1;
+      this.breedCooldown = this.breedCooldown - 1;
+      if (this.breedCooldown < 0) {
+        this.breedCooldown = 0;
+      }
       return true;
+  }
+  canBreed() {
+    return this.breedCooldown == 0;
+  }
+  breed() {
+    this.breedCooldown = PredBreedCooldown;
   }
   eat() {
       this.hunger = predHungerMax;
@@ -352,13 +380,16 @@ class Ecosystem {
               preyKilled++;
               this.preyStorage.splice(chosenPreyNum, 1);
               this.predatorStorage[avaliablePreds[i]].eat();
-              if (predSwitch) {
-                  breedablePreds1.push(avaliablePreds[i]);
-                  predSwitch = false;
-              } else {
-                  breedablePreds2.push(avaliablePreds[i]);
-                  predSwitch = true;
+              if (this.predatorStorage[avaliablePreds[i]].canBreed()) {
+                if (predSwitch) {
+                    breedablePreds1.push(avaliablePreds[i]);
+                    predSwitch = false;
+                } else {
+                    breedablePreds2.push(avaliablePreds[i]);
+                    predSwitch = true;
+                }
               }
+              
           } else {
               // Prey is spared
           }
@@ -366,8 +397,10 @@ class Ecosystem {
 
       // Preds breed
       for (let i = 0; i < breedablePreds1.length; i++) {
-          this.predatorStorage.push(createPred(mutate(calcDNA(this.predatorStorage[breedablePreds1[i]].genotype, this.predatorStorage[breedablePreds2[i]].genotype), PredMutationChance)))
-      }
+            this.predatorStorage.push(createPred(mutate(calcDNA(this.predatorStorage[breedablePreds1[i]].genotype, this.predatorStorage[breedablePreds2[i]].genotype), PredMutationChance)))
+            this.predatorStorage[breedablePreds1[i]].breed();
+            this.predatorStorage[breedablePreds2[i]].breed();
+        }
 
 
       let breedablePreys1 = [];
@@ -390,12 +423,14 @@ class Ecosystem {
             if (this.bushStorage[avaliableBushes[chosenBushNum]].hasBerries) {
                 this.bushStorage[avaliableBushes[chosenBushNum]].eat();
                 bushesEaten++;
-                if (preySwitch) {
-                    breedablePreys1.push(i);
-                    preySwitch = false;
-                } else {
-                    breedablePreys2.push(i)
-                    preySwitch = true;
+                if (this.preyStorage[i].canBreed()) {
+                    if (preySwitch) {
+                        breedablePreys1.push(i);
+                        preySwitch = false;
+                    } else {
+                        breedablePreys2.push(i)
+                        preySwitch = true;
+                    }
                 }
             }
         }
@@ -405,8 +440,10 @@ class Ecosystem {
       }
       // Prey breed
       for (let i = 0; i < breedablePreys1.length; i++) {
-          this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
-      }
+            this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
+            this.preyStorage[breedablePreds1[i]].breed();
+            this.preyStorage[breedablePreds2[i]].breed();
+       }
 
       // Remove dead preds
       for (let i = predDeathList.length - 1; i > -1; i--) {
