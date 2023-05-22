@@ -215,7 +215,7 @@ class Prey {
       return true;
   }
   canBreed() {
-    return this.breedCooldown == 0;
+    return (this.breedCooldown == 0);
   }
   breed() {
     this.breedCooldown = PreyBreedCooldown;
@@ -250,7 +250,7 @@ class Predator {
       return true;
   }
   canBreed() {
-    return this.breedCooldown == 0;
+    return (this.breedCooldown == 0);
   }
   breed() {
     this.breedCooldown = PredBreedCooldown;
