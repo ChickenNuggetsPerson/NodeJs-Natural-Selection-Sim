@@ -218,7 +218,6 @@ class Prey {
     return (this.breedCooldown == 0);
   }
   breed() {
-    console.log("Breed Called")
     this.breedCooldown = PreyBreedCooldown;
   }
   eat() {
@@ -447,7 +446,7 @@ class Ecosystem {
       console.log("Prey Breed")
       // Prey breed
       for (let i = 0; i < breedablePreys1.length; i++) {
-            this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
+            //this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
             this.preyStorage[breedablePreys1[i]].breed();
             this.preyStorage[breedablePreys2[i]].breed();
        }
