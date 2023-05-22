@@ -555,6 +555,7 @@ function delay(time) {
 function mutate(genotype, mutationChance) {
     let randomChance = randomIntFromInterval(0, 100);
     if (mutationChance > randomChance) {
+        console.log("Mutated");
         let newGenotype = randomIntFromInterval(0, 100);
         if (newGenotype < 33) {
             return homoDom;
