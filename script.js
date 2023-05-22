@@ -446,7 +446,7 @@ class Ecosystem {
       console.log("Prey Breed")
       // Prey breed
       for (let i = 0; i < breedablePreys1.length; i++) {
-            //this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
+            this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
             this.preyStorage[breedablePreys1[i]].breed();
             this.preyStorage[breedablePreys2[i]].breed();
        }
@@ -598,6 +598,7 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 function mutate(genotype, mutationChance) {
+    console.log("Mutating")
     let randomChance = randomIntFromInterval(0, 100);
     if (mutationChance > randomChance) {
         console.log("Mutated");
