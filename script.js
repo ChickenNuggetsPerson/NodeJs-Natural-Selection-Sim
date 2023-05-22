@@ -447,8 +447,8 @@ class Ecosystem {
       // Prey breed
       for (let i = 0; i < breedablePreys1.length; i++) {
             this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
-            this.preyStorage[breedablePreds1[i]].breed();
-            this.preyStorage[breedablePreds2[i]].breed();
+            this.preyStorage[breedablePreys1[i]].breed();
+            this.preyStorage[breedablePreys2[i]].breed();
        }
 
        console.log("Remove Dead Predators")
