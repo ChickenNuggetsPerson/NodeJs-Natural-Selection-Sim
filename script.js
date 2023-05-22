@@ -340,6 +340,7 @@ class Ecosystem {
 
       let avaliableBushes = [];
 
+        console.log("Iterate Bushes")
       // Iterate bushes
       for (let i = 0; i < this.bushStorage.length; i++) {
           this.bushStorage[i].iterate();
@@ -351,6 +352,7 @@ class Ecosystem {
 
       let predDeathList = [];
       let avaliablePreds = [];
+      console.log("Kill Predators")
       // Kill Preds
       for (let i = 0; i < this.predatorStorage.length; i++) {
           if(!this.predatorStorage[i].iterate()) {
@@ -366,7 +368,7 @@ class Ecosystem {
       let predSwitch = false;
 
       let preyKilled = 0;
-
+      console.log("Predators Eat")
       // Preds Eat
       for (let i = 0; i < avaliablePreds.length; i++) {
           const chosenPreyNum = randomIntFromInterval(0, this.preyStorage.length - 1);
@@ -395,6 +397,7 @@ class Ecosystem {
           }
       }
 
+      console.log("Predators Breed")
       // Preds breed
       for (let i = 0; i < breedablePreds1.length; i++) {
             this.predatorStorage.push(createPred(mutate(calcDNA(this.predatorStorage[breedablePreds1[i]].genotype, this.predatorStorage[breedablePreds2[i]].genotype), PredMutationChance)))
@@ -410,6 +413,7 @@ class Ecosystem {
       let bushesEaten = 0;
 
       let starvedPreys = []
+      console.log("Prey eat")
       // Prey eat
       for (let i = 0; i < this.preyStorage.length; i++) {
 
@@ -438,6 +442,8 @@ class Ecosystem {
 
 
       }
+
+      console.log("Prey Breed")
       // Prey breed
       for (let i = 0; i < breedablePreys1.length; i++) {
             this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
@@ -445,11 +451,13 @@ class Ecosystem {
             this.preyStorage[breedablePreds2[i]].breed();
        }
 
+       console.log("Remove Dead Predators")
       // Remove dead preds
       for (let i = predDeathList.length - 1; i > -1; i--) {
           this.predatorStorage.splice(predDeathList[i], 1);
       }
 
+      console.log("Remove Dead Prey")
     // Remove dead prey
     for (let i = starvedPreys.length - 1; i > -1; i--) {
         this.preyStorage.splice(starvedPreys[i], 1);
