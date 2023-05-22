@@ -454,7 +454,7 @@ class Ecosystem {
        console.log("Remove Dead Predators")
       // Remove dead preds
       for (let i = predDeathList.length - 1; i > -1; i--) {
-          this.predatorStorage.splice(predDeathList[i], 1);
+        this.predatorStorage.splice(predDeathList[i], 1);
       }
 
       console.log("Remove Dead Prey")
