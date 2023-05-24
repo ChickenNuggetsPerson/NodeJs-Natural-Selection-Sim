@@ -14,7 +14,9 @@
     <br>
     <div class="flex-container">
       <div>
-        <button id="runButton" onclick="main()">Run</button> <input id="continue" type="checkbox"><br><br>
+        <button id="runButton" onclick="main()">Run</button> 
+        <input id="continue" type="checkbox"> 
+        <button id="mutateButton" onclick="mutateClick()">MUTATE</button><br><br>
         preyHungerMax 
         <br>predHungerMax 
         <br>
@@ -23,6 +25,12 @@
         <br>
         <br>predDomChance 
         <br>predRecChance 
+        <br>
+        <br>PreyBreedCooldown
+        <br>PreyMutationChance
+        <br>
+        <br>PredBreedCooldown
+        <br>PredMutationChance
         <br>
         <br>bushRegrowthTime 
         <br>
@@ -38,11 +46,17 @@
           <input value="8" id="preyHungerMax"type="number"> </input>
           <input value="15" id="predHungerMax"type="number"> </input>
           <br><br>
-          <input value="0" id="preyDomChance"type="number"> </input>
-          <input value="0" id="preyRecChance"type="number"> </input>
+          <input value="-20" id="preyDomChance"type="number"> </input>
+          <input value="20" id="preyRecChance"type="number"> </input>
           <br><br>
           <input value="-40" id="predDomChance"type="number"> </input>
-          <input value="-40" id="predRecChance"type="number"> </input>
+          <input value="-30" id="predRecChance"type="number"> </input>
+          <br><br>
+          <input value="1" id="PreyBreedCooldown"type="number"> </input>
+          <input value="40" id="PreyMutationChance"type="number"> </input>
+          <br><br>
+          <input value="1" id="PredBreedCooldown"type="number"> </input>
+          <input value="20" id="PredMutationChance"type="number"> </input>
           <br><br>
           <input value="3" id="bushRegrowthTime"type="number"> </input>
           <br><br>
@@ -50,10 +64,22 @@
           <input value="10" id="PredStart"type="number"> </input>
           <input value="500" id="BushStart"type="number"> </input>
           <br><br>
-          <input value="25" id="updateSpeed"type="number"> </input>
-          <input value="50" id="maxSteps"type="number"> </input>
+          <input value="1" id="updateSpeed"type="number"> </input>
+          <input value="500" id="maxSteps"type="number"> </input>
       </div>
-      <div id="chart"></div>
+      <div>
+        <div id="chart"></div>
+        <div>
+          <h2>Live Stats</h2>
+          <h3 id="line1"></h3>
+          <h3 id="line2"></h3>
+          <h3 id="line3"></h3>
+          <h3 id="line4"></h3>
+          <h3 id="line5"></h3>
+          
+        </div>
+      </div>
+      
     </div>
 
     <div>

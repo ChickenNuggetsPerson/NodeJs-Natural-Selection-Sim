@@ -167,14 +167,11 @@ const PreyStart = document.getElementById("PreyStart").value
 const PredStart = document.getElementById("PredStart").value
 const BushStart = document.getElementById("BushStart").value
 
-const PredBreedCooldown = 1;
-const PreyBreedCooldown = 1;
+const PredBreedCooldown = document.getElementById("PredBreedCooldown").value
+const PreyBreedCooldown = document.getElementById("PreyBreedCooldown").value
 
-const PreyMutationChance = 10;
-const PredMutationChance = 40;
-
-const PreyGeneStrengthVarience = 10;
-const PredGeneStrengthVarience = 10;
+const PreyMutationChance = document.getElementById("PreyMutationChance").value
+const PredMutationChance = document.getElementById("PredMutationChance").value
 
 const updateSpeed = document.getElementById("updateSpeed").value;
 const maxSteps = document.getElementById("maxSteps").value;
@@ -329,6 +326,7 @@ class Ecosystem {
       for (let i = 0; i < numOfBushes; i++) {
           this.bushStorage.push(new Bush());
       }
+      document.getElementById("mutateButton").disabled = false;
   }
 
   step() {
@@ -337,10 +335,24 @@ class Ecosystem {
       console.log("Step #", this.stepCount);
 
 
+      // Mutate Button
+      if (document.getElementById("mutateButton").disabled) {
+        
+        for (let i = 0; i < this.preyStorage.length; i++) {
+            this.preyStorage[i].genotype = mutate(homoDom, 200);
+        }
+        for (let i = 0; i < this.predatorStorage.length; i++) {
+            this.predatorStorage[i].genotype = mutate(homoDom, 200);
+        }
+
+        document.getElementById("mutateButton").disabled = false;
+      }
+
+
 
       let avaliableBushes = [];
 
-        console.log("Iterate Bushes")
+        //console.log("Iterate Bushes")
       // Iterate bushes
       for (let i = 0; i < this.bushStorage.length; i++) {
           this.bushStorage[i].iterate();
@@ -352,7 +364,7 @@ class Ecosystem {
 
       let predDeathList = [];
       let avaliablePreds = [];
-      console.log("Kill Predators")
+      //console.log("Kill Predators")
       // Kill Preds
       for (let i = 0; i < this.predatorStorage.length; i++) {
           if(!this.predatorStorage[i].iterate()) {
@@ -368,7 +380,7 @@ class Ecosystem {
       let predSwitch = false;
 
       let preyKilled = 0;
-      console.log("Predators Eat")
+      //console.log("Predators Eat")
       // Preds Eat
       for (let i = 0; i < avaliablePreds.length; i++) {
           const chosenPreyNum = randomIntFromInterval(0, this.preyStorage.length - 1);
@@ -397,7 +409,7 @@ class Ecosystem {
           }
       }
 
-      console.log("Predators Breed")
+      //console.log("Predators Breed")
       // Preds breed
       for (let i = 0; i < breedablePreds1.length; i++) {
             this.predatorStorage.push(createPred(mutate(calcDNA(this.predatorStorage[breedablePreds1[i]].genotype, this.predatorStorage[breedablePreds2[i]].genotype), PredMutationChance)))
@@ -413,7 +425,7 @@ class Ecosystem {
       let bushesEaten = 0;
 
       let starvedPreys = []
-      console.log("Prey eat")
+      //console.log("Prey eat")
       // Prey eat
       for (let i = 0; i < this.preyStorage.length; i++) {
 
@@ -443,24 +455,22 @@ class Ecosystem {
 
       }
 
-      console.log("Prey Breed")
+      //console.log("Prey Breed")
       // Prey breed
       for (let i = 0; i < breedablePreys1.length; i++) {
 
-            const baby = createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance))
-            console.log(baby)
-            this.preyStorage.push(baby)
+            this.preyStorage.push(createPrey(mutate(calcDNA(this.preyStorage[breedablePreys1[i]].genotype, this.preyStorage[breedablePreys2[i]].genotype), PreyMutationChance)))
             this.preyStorage[breedablePreys1[i]].breed();
             this.preyStorage[breedablePreys2[i]].breed();
        }
 
-       console.log("Remove Dead Predators")
+       //console.log("Remove Dead Predators")
       // Remove dead preds
       for (let i = predDeathList.length - 1; i > -1; i--) {
         this.predatorStorage.splice(predDeathList[i], 1);
       }
 
-      console.log("Remove Dead Prey")
+      //console.log("Remove Dead Prey")
     // Remove dead prey
     for (let i = starvedPreys.length - 1; i > -1; i--) {
         this.preyStorage.splice(starvedPreys[i], 1);
@@ -483,10 +493,17 @@ class Ecosystem {
       //console.log("---------------------");
 
       console.log("---------------------");
-      console.log("          Pred    Prey    Bushes");
+      console.log("Pred    Prey    Bushes");
       console.log("Current:  ", this.predatorStorage.length, "    ", this.preyStorage.length, "    ", avaliableBushes.length);
       console.log("Killed:   ", predDeathList.length, "    ", preyKilled, "     ", bushesEaten)
       console.log("---------------------");
+    
+      document.getElementById("line1").innerText = "---------------------";
+      document.getElementById("line2").innerText = "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Pred    Prey    Bushes"
+      document.getElementById("line3").innerText = "Current:  " + this.predatorStorage.length + "    " + this.preyStorage.length + "    " + avaliableBushes.length;
+      document.getElementById("line4").innerText = "Killed:‎ ‎ " + predDeathList.length + "  ‎   " + preyKilled + "   ‎   " + bushesEaten;
+      document.getElementById("line5").innerText = "---------------------"
+
 
       statSystem.pushData(this.stepCount, avaliableBushes.length, this.preyStorage.length, this.predatorStorage.length)
       
@@ -601,10 +618,8 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 function mutate(genotype, mutationChance) {
-    console.log("Mutating")
     let randomChance = randomIntFromInterval(0, 100);
     if (mutationChance > randomChance) {
-        console.log("Mutated");
         let newGenotype = randomIntFromInterval(0, 100);
         if (newGenotype < 33) {
             return homoDom;
@@ -645,4 +660,9 @@ let ecosystem = new Ecosystem();
       await delay(updateSpeed);   
   }
   stopRunning()
+}
+
+
+function mutateClick() {
+    document.getElementById("mutateButton").disabled = true;
 }
